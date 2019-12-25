@@ -8,8 +8,7 @@ const app    = require('express')()
     , charge = require('lightning-charge-client')(process.env.CHARGE_URL, process.env.CHARGE_TOKEN)
 
 Object.keys(items).filter(k => !items[k].title).forEach(k => items[k].title = k)
-
-app.set('port', process.env.PORT || 9116)
+const port = process.env.PORT || 3000;
 app.set('host', process.env.HOST || 'localhost')
 app.set('title', process.env.TITLE || 'Lightning Nano POS')
 app.set('currency', process.env.CURRENCY || 'BTC')
@@ -64,5 +63,5 @@ app.get('/invoice/:invoice/wait', pwrap(async (req, res) => {
   res.sendStatus(paid === null ? 402 : paid ? 204 : 410)
 }))
 
-app.listen(app.settings.port, app.settings.host, _ =>
-  console.log(`HTTP server running on ${ app.settings.host }:${ app.settings.port }`))
+app.listen(port, () => console.log(`Listening on ${port}`));
+
