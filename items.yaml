@@ -1,5 +1,3 @@
----
-
 tea:
   price: 0.02
   title: Green Tea # title is optional, defaults to the keys
