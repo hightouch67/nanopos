@@ -41,7 +41,7 @@ app.post('/invoice', pwrap(async (req, res) => {
   const item = req.body.item ? items[req.body.item]
              : app.enabled('custom_amount') ? { price: req.body.amount }
              : null
-
+  console.log(item)
   if (!item) return res.sendStatus(404)
 
   const metadata = { source: 'nanopos', item: req.body.item }
