@@ -7,7 +7,8 @@
     "start": "./start.sh",
     "dist": "./build.sh",
     "prepublishOnly": "npm run dist",
-    "heroku-prebuild": "npm install --only=dev"
+    "heroku-prebuild": "npm install --only=dev",
+     "babel-version": "babel --version"
   },
   "files": [
     "dist",
@@ -41,7 +42,7 @@
     "pug": "^2.0.4"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
+    "babel-cli": "^6.6.5",
     "babel-plugin-syntax-object-rest-spread": "^6.13.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
