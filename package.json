@@ -6,9 +6,7 @@
   "scripts": {
     "start": "./start.sh",
     "dist": "./build.sh",
-    "prepublishOnly": "npm run dist",
-    "heroku-prebuild": "npm install --only=dev",
-     "babel-version": "babel --version"
+    "prepublishOnly": "npm run dist"
   },
   "files": [
     "dist",
