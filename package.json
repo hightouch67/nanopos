@@ -6,7 +6,8 @@
   "scripts": {
     "start": "./start.sh",
     "dist": "./build.sh",
-    "prepublishOnly": "npm run dist"
+    "prepublishOnly": "npm run dist",
+    "heroku-prebuild": "npm install --only=dev"
   },
   "files": [
     "dist",
